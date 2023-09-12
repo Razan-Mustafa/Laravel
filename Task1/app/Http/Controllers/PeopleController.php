@@ -11,9 +11,10 @@ class PeopleController extends Controller
 {
     public function index3(Request $request)
     {
-        $pe = People::find(1)->name;
-        return view('Omany');
+        $pe = People::all();
+        // return view('Omany',['pe' => $pe]);
+        return view('Omany', compact('pe'));
 
-       // dd($cont);
+        //dd($pe );
     }
 }

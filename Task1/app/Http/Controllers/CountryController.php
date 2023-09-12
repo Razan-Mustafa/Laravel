@@ -11,7 +11,7 @@ class CountryController extends Controller
     public function index2(Request $request)
     {
         $cont = Capital::find(1)->name;
-        return view('one');
+        //return view('one', 'cont'=>$cont);
 
        // dd($cont);
     }

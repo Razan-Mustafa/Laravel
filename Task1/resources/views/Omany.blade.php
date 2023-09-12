@@ -8,5 +8,9 @@
 </head>
 <body>
     one to many
+
+    @foreach($pe as $p)
+     {{ $p->name}}
+    @endforeach
 </body>
 </html>

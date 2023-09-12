@@ -27,7 +27,7 @@ use App\Http\Controllers\taskA;
 // });
 
 // Route::get('contact','razan@index');
-// Route::get('/+home', function () {
+// Route::get('/home', function () {
 //     return view('home');
 // });
 
@@ -41,5 +41,11 @@ use App\Http\Controllers\taskA;
 // Route::get('/', [\App\Http\Controllers\taskA::class, 'Select'])->name('CS');
 route::post('user',[taskA::class,'data']);
 Route::view('login','login');
-route::view('home','home');
+// route::view('home','home');
+Route::get('home', function () {
+    return view('home');
+})->middleware('IsLoged');
+Route::get('admin', function () {
+    return view('admin');
+})->name('admin');
 

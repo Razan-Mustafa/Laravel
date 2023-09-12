@@ -19,7 +19,7 @@
                 {{ session('error') }}
             </div>
             @endif
-        </span>
+    </span>
 <form action="user" method="POST">
     @csrf
     <div class="container mt-5">
